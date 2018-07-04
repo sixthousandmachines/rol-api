@@ -26,6 +26,7 @@ namespace rol_api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.Configure<AppSettings>(Configuration.GetSection("App"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
